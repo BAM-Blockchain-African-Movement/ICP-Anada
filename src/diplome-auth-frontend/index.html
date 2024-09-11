@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentification des Diplômes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestion des Diplômes</h1>
+        
+        <!-- Formulaire pour ajouter un diplôme -->
+        <div class="form-section">
+            <h2>Ajouter un diplôme</h2>
+            <form id="ajouterDiplomeForm">
+                <label for="id">ID Diplôme :</label>
+                <input type="text" id="id" name="id" required>
+                
+                <label for="nomEtudiant">Nom de l'étudiant :</label>
+                <input type="text" id="nomEtudiant" name="nomEtudiant" required>
+                
+                <label for="dateObtention">Date d'obtention :</label>
+                <input type="text" id="dateObtention" name="dateObtention" required>
+                
+                <label for="universite">Université :</label>
+                <input type="text" id="universite" name="universite" required>
+                
+                <label for="specialite">Spécialité :</label>
+                <input type="text" id="specialite" name="specialite" required>
+                
+                <label for="hashDiplome">Hash du diplôme :</label>
+                <input type="text" id="hashDiplome" name="hashDiplome" required>
+                
+                <button type="submit">Ajouter le diplôme</button>
+            </form>
+        </div>
+
+        <!-- Formulaire pour vérifier un diplôme -->
+        <div class="form-section">
+            <h2>Vérifier un diplôme</h2>
+            <form id="verifierDiplomeForm">
+                <label for="verifierId">ID Diplôme :</label>
+                <input type="text" id="verifierId" name="verifierId" required>
+                <button type="submit">Vérifier</button>
+            </form>
+            <div id="resultatDiplome"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

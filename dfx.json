@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "diplome-auth-backend": {
+      "main": "src/diplome-auth-backend/main.mo",
+      "type": "motoko"
+    },
+    "diplome-auth-frontend": {
+      "dependencies": [
+        "diplome-auth-backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/poll_frontend/index.html"
+      },
+      "source": [
+        "src/diplome-auth-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "diplome-auth-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
+
