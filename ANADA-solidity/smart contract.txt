@@ -1,0 +1,35 @@
+pragma solidity 0.4.25;
+
+contract acte_de_naissance{
+
+    constructor() public{
+    }
+    struct acteNaissance{
+        string numActe;
+        string nomE;
+    }
+
+ 
+
+    // le mapping
+    mapping(string => mapping(string => acteNaissance))acte;
+
+    //string[] public acteDeNaissance;
+
+    function ajouterActe(string memory _numActe, string memory _nomE)
+
+        public{
+            acteNaissance memory unActeNaisance = acteNaissance(_numActe, _nomE);
+
+            acte[_numActe][_nomE] = unActeNaisance;
+
+    }
+
+    function afficheActe(string memory _numActe, string memory _nomE) 
+        public view returns(string memory){ 
+        return(acte[_numActe][_nomE].numActe); 
+    }
+    
+}
+
+
